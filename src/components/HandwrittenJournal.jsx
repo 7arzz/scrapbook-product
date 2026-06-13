@@ -300,13 +300,14 @@ const HandwrittenJournal = () => {
   const updateScale = () => {
     const width = window.innerWidth;
     const bookWidth = 380; // base single page width
-    const padding = 40;
+    const padding = 20; // Reduced padding for mobile
     
-    // Always consider double width for the container
-    const requiredWidth = (bookWidth * 2) + padding;
+    // Total width needed is 2 pages when open
+    const requiredWidth = (bookWidth * 2) + (padding * 2);
 
     if (width < requiredWidth) {
-      setScale(width / requiredWidth);
+      // Allow it to be slightly larger on mobile to maximize space
+      setScale(Math.min(1, (width - padding) / requiredWidth));
     } else {
       setScale(1);
     }
@@ -338,10 +339,13 @@ const HandwrittenJournal = () => {
     if (e.target.closest('.btn-restart-journal')) return;
 
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / scale; // Adjust for scale
+    const x = e.clientX - rect.left;
 
-    // In a double-width container, spine is at bookWidth
-    if (x > 380) {
+    // Logic for single-width container (380px)
+    // When open, spine should be at the middle of the screen
+    // but the rect is already scaled and translated.
+    // If click is on right half of visible book area
+    if (x > rect.width / 2) {
       goNextPage();
     } else {
       goPrevPage();
@@ -375,22 +379,38 @@ const HandwrittenJournal = () => {
   };
 
   const getBookStyle = () => {
-    let baseTransform = '';
+    let xOffset = 0;
     
-    // Center the visible part of the book
-    if (currentLocation === 1) {
-      // Move left by 25% of the 2-page container to center the right page
-      baseTransform = 'translateX(-25%)';
+    // We want the spine (left edge of the 380px div) to be centered when open
+    // Since the 380px div is centered by flex, its spine is at -(380/2) from center
+    // So we need to move it right by 190px (50%) to put spine at center.
+    if (currentLocation > 1 && currentLocation < maxLocation) {
+      xOffset = 50; // translateX(50%) moves spine to center
     } else if (currentLocation === maxLocation) {
-      // Move right by 25% of the 2-page container to center the left page
-      baseTransform = 'translateX(25%)';
-    } else {
-      // Spine is centered
-      baseTransform = 'translateX(0%)';
+      xOffset = 100; // moves back cover to center
     }
     
     return { 
-      transform: `scale(${scale}) ${baseTransform}`,
+      transform: `translateX(${xOffset}%) scale(${scale}) translateX(${-xOffset}%) translateX(${xOffset}%)`, // Complex but ensures origin
+      // Simplified: Just use translateX and scale separately if possible or calculate pixels
+      transform: `translateX(calc(${xOffset}% - ${xOffset === 50 ? '0px' : '0px'})) scale(${scale})`,
+    };
+  };
+
+  // Re-thinking transform to be bulletproof
+  const finalBookStyle = () => {
+    let transform = `scale(${scale})`;
+    
+    if (currentLocation > 1 && currentLocation < maxLocation) {
+        // Spine centered
+        transform += ` translateX(50%)`;
+    } else if (currentLocation === maxLocation) {
+        // Back cover centered
+        transform += ` translateX(100%)`;
+    }
+    
+    return { 
+      transform,
       transition: 'transform 0.6s'
     };
   };
@@ -399,7 +419,7 @@ const HandwrittenJournal = () => {
     <div className="journal-wrapper">
       <div
         className="journal-book"
-        style={getBookStyle()}
+        style={finalBookStyle()}
         onClick={handleBookClick}
       >
         {journalData.map((paper, index) => (

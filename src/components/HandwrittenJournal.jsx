@@ -224,7 +224,6 @@ const PageContent = ({ data, restart }) => {
     return (
       <div className={`${sideClass} leather-texture ${data.className || ''}`}>
         {data.title && <h2>{data.title}</h2>}
-        <div className="notebook-strap"></div>
         {data.label && <div className="end-label">{data.label}</div>}
         {data.showRestart && (
           <button

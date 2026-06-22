@@ -317,7 +317,7 @@
 
 /* Leather Cover Styles */
 .leather-texture {
-  background-color: #432e18 !important;
+  background-color: #1a365d !important;
   background-image: url('https://www.transparenttextures.com/patterns/leather.png');
   display: flex;
   flex-direction: column;
@@ -371,7 +371,7 @@
 
 .btn-restart-journal:hover {
   background: #c5a059;
-  color: #432e18;
+  color: #1a365d;
 }
 
 .final-page {

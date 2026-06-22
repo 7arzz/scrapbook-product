@@ -240,6 +240,30 @@ const PageContent = ({ data, restart }) => {
             {data.buttonText || "Restart Journey"}
           </button>
         )}
+        {data.lines?.map((line, idx) => {
+          if (line.type === 'br') return <br key={idx} />;
+          if (line.type === 'doodle') return <Doodle key={idx} name={line.name} text={line.text} />;
+          if (line.type === 'image') {
+            return (
+              <div key={idx} className={`photo-frame ${line.className || ''}`}>
+                <img src={line.src} alt="Decoration" />
+              </div>
+            );
+          }
+          return (
+            <p key={idx} className={line.className}>
+              {line.spans ? (
+                line.spans.map((span, sIdx) => (
+                  <span key={sIdx} className={span.className}>
+                    {span.text}
+                  </span>
+                ))
+              ) : (
+                line.text
+              )}
+            </p>
+          );
+        })}
       </div>
     );
   }

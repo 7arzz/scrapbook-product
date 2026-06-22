@@ -8,6 +8,10 @@ import doodle from "../assets/doodle.png";
 import doodle1 from "../assets/doodle1.png";
 import doodle2 from "../assets/doodle2.png";
 import doodle3 from "../assets/doodle3.png";
+import blueOrchid from "../assets/BlueOrchid.png";
+import hydrangea from "../assets/Hydrangea.png";
+import blueRose from "../assets/blueRose.png";
+
 
 export const journalData = [
   {
@@ -16,6 +20,10 @@ export const journalData = [
       template: "cover",
       title: "For You :\n \Arina",
       className: "cover-main",
+      lines: [
+        { type: "image", src: blueRose, className: "sticker-right" }
+      ]
+
     },
     back: {
       template: "lined",
@@ -76,12 +84,12 @@ export const journalData = [
         { type: "doodle", name: "hearts-top" },
         {
           type: "text",
-          text: "Selamat atas kelulusannya",
+          text: "Selamat menjalani hari",
           className: "handwritten underlined-red",
         },
         {
           type: "text",
-          text: "makin Sukses dan Jaya",
+          text: "makin cantik + imutt",
           className: "handwritten underlined-red",
         },
         {
@@ -124,6 +132,7 @@ export const journalData = [
           text: "Selamanya.",
           className: "handwritten underlined-red",
         },
+        { type: "image", src: blueOrchid, className: "doodle-image" },
       ],
     },
   },
@@ -435,6 +444,7 @@ export const journalData = [
           className: "handwritten blue-ink",
         },
         { type: "doodle", name: "blue-heart" },
+        { type: "image", src: blueRose, className: "doodle-image" },
       ],
     },
     back: {
@@ -887,6 +897,10 @@ export const journalData = [
       label: "Forever & Always",
       showRestart: true,
       buttonText: "Restart Our Journey",
+      lines: [
+        { type: "image", src: hydrangea, className: "sticker-right" }
+      ]
+
     },
   },
 ];

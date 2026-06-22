@@ -14,7 +14,7 @@ export const journalData = [
     id: 1,
     front: {
       template: "cover",
-      title: "For You :\n \nFilza Dwi \nAulia Rahma",
+      title: "For You :\n \Arina",
       className: "cover-main",
     },
     back: {
@@ -25,7 +25,7 @@ export const journalData = [
         { type: "text", text: "This is for you", className: "handwritten" },
         {
           type: "text",
-          text: "My favorit person",
+          text: "My favorit friend",
           className: "handwritten bottom-txt",
         },
         { type: "doodle", name: "dashed-loop" },
@@ -42,17 +42,17 @@ export const journalData = [
         { type: "image", src: loveBallon, className: "sticker-right" },
         {
           type: "text",
-          text: "Happy",
+          text: "Selamat",
           className: "handwritten underlined-red",
         },
         {
           type: "text",
-          text: "Graduation",
+          text: "Menjalani hari ",
           className: "handwritten underlined-red",
         },
         {
           type: "text",
-          text: "filza....",
+          text: "arin....",
           className: "handwritten underlined-red",
         },
         { type: "br" },
@@ -91,7 +91,7 @@ export const journalData = [
         },
         {
           type: "text",
-          text: "filza. Semoga kedepannya",
+          text: "arin. Semoga kedepannya",
           className: "handwritten underlined-red",
         },
         {
@@ -101,7 +101,7 @@ export const journalData = [
         },
         {
           type: "text",
-          text: "Sama filza, Semoga bisa",
+          text: "Sama arin, Semoga bisa",
           className: "handwritten underlined-red",
         },
         {
@@ -111,7 +111,7 @@ export const journalData = [
         },
         {
           type: "text",
-          text: "ini filza perjuangin ,",
+          text: "ini arin perjuangin ,",
           className: "handwritten underlined-red",
         },
         {
@@ -220,16 +220,16 @@ export const journalData = [
         },
         {
           type: "text",
-          text: "baik dimanapun filza",
+          text: "baik dimanapun arin",
           className: "handwritten blue-ink",
         },
         {
           type: "text",
-          text: "berada, Semoga filza",
+          text: "berada, Semoga arin",
           spans: [
             { text: "berada, " },
             { text: "Semoga", className: "underlined-blue" },
-            { text: " filza" },
+            { text: " arin" },
           ],
           className: "handwritten blue-ink",
         },
@@ -245,9 +245,9 @@ export const journalData = [
         },
         {
           type: "text",
-          text: "filza, Senantiasa bahagia",
+          text: "arin, Senantiasa bahagia",
           spans: [
-            { text: "filza, Senantiasa " },
+            { text: "arin, Senantiasa " },
             { text: "bahagia", className: "underlined-blue" },
           ],
           className: "handwritten blue-ink",
@@ -289,10 +289,10 @@ export const journalData = [
         },
         {
           type: "text",
-          text: "dimanapun filza berada",
+          text: "dimanapun arin berada",
           spans: [
             { text: "dimanapun", className: "circled-orange" },
-            { text: " filza berada" },
+            { text: " arin berada" },
           ],
           className: "handwritten",
         },
@@ -456,11 +456,7 @@ export const journalData = [
           text: "hidup aku lebih happy,",
           className: "handwritten",
         },
-        {
-          type: "text",
-          text: "with everything about",
-          className: "handwritten",
-        },
+
         {
           type: "text",
           text: "aku beruntung banget",
@@ -492,7 +488,7 @@ export const journalData = [
         },
         {
           type: "text",
-          text: "I love you Infinitely",
+          text: "Friend like you",
           className: "handwritten",
         },
         { type: "doodle", name: "yellow-hearts-bottom" },
@@ -704,141 +700,7 @@ export const journalData = [
       ],
     },
   },
-  {
-    id: 10,
-    front: {
-      template: "lined",
-      pageClass: "page-18",
-      lines: [
-        { type: "doodle", name: "side-heart" },
-        {
-          type: "text",
-          text: "Sejauh apapun",
-          className: "handwritten indent-1",
-        },
-        { type: "text", text: "kalau kita", className: "handwritten indent-2" },
-        { type: "text", text: "Punya rasa", className: "handwritten indent-3" },
-        { type: "text", text: "dan doa", className: "handwritten indent-4" },
-        { type: "text", text: "yang Sama", className: "handwritten indent-5" },
-        { type: "text", text: "besar itu", className: "handwritten indent-4" },
-        { type: "text", text: "gak akan", className: "handwritten indent-3" },
-        { type: "text", text: "berat menjalaninya", className: "handwritten" },
-      ],
-    },
-    back: {
-      template: "lined",
-      pageClass: "page-19",
-      lines: [
-        { type: "text", text: "Kamu berhasil", className: "handwritten" },
-        { type: "text", text: "buat aku menjadi", className: "handwritten" },
-        { type: "text", text: "diri Sendiri , dan", className: "handwritten" },
-        { type: "text", text: "aku merasa Sangat", className: "handwritten" },
-        {
-          type: "text",
-          text: "dicintai dengan hebat oleh mu.",
-          className: "handwritten",
-        },
-        { type: "doodle", name: "tulip" },
-      ],
-    },
-  },
-  {
-    id: 11,
-    front: {
-      template: "lined",
-      pageClass: "page-20",
-      lines: [
-        {
-          type: "text",
-          text: "Jatuh cinta Sama",
-          spans: [
-            { text: "Jatuh cinta " },
-            { text: "Sama", className: "underlined-red" },
-          ],
-          className: "handwritten",
-        },
-        {
-          type: "text",
-          text: "kamu adalah ketidak-",
-          spans: [
-            { text: "kamu", className: "underlined-red" },
-            { text: " " },
-            { text: "adalah", className: "underlined-red" },
-            { text: " ketidak-" },
-          ],
-          className: "handwritten",
-        },
-        {
-          type: "text",
-          text: "Sengajaan yang lebih",
-          className: "handwritten",
-        },
-        {
-          type: "text",
-          text: "indah dari ribuan",
-          spans: [
-            { text: "indah dari " },
-            { text: "ribuan", className: "underlined-red" },
-          ],
-          className: "handwritten",
-        },
-        {
-          type: "text",
-          text: "hal yang Pernah",
-          spans: [
-            { text: "hal", className: "underlined-red" },
-            { text: " yang Pernah" },
-          ],
-          className: "handwritten",
-        },
-        { type: "text", text: "aku rencanakan", className: "handwritten" },
-      ],
-    },
-    back: {
-      template: "lined",
-      pageClass: "page-21",
-      lines: [
-        { type: "doodle", name: "orange-bg-top" },
-        {
-          type: "text",
-          text: "Aku Suka weekend",
-          spans: [
-            { text: "Aku Suka " },
-            { text: "weekend", className: "underlined-orange-thick" },
-          ],
-          className: "handwritten",
-        },
-        {
-          type: "text",
-          text: "tapi lebih Suka lagi",
-          className: "handwritten",
-        },
-        {
-          type: "text",
-          text: "with you till the end.",
-          spans: [
-            {
-              text: "with you till the end.",
-              className: "underlined-orange-thick",
-            },
-          ],
-          className: "handwritten",
-        },
-        { type: "br" },
-        {
-          type: "text",
-          text: "I'm proud of you",
-          spans: [
-            { text: "I'm " },
-            { text: "proud", className: "wavy-orange" },
-            { text: " of you" },
-          ],
-          className: "handwritten",
-        },
-        { type: "doodle", name: "orange-bg-bottom" },
-      ],
-    },
-  },
+
   {
     id: 12,
     front: {
@@ -898,75 +760,7 @@ export const journalData = [
       ],
     },
   },
-  {
-    id: 13,
-    front: {
-      template: "lined",
-      pageClass: "page-24",
-      lines: [
-        {
-          type: "text",
-          text: "Everything is So much",
-          className: "handwritten",
-        },
-        { type: "text", text: "more Perfect when", className: "handwritten" },
-        {
-          type: "text",
-          text: "I'm with you ❤",
-          spans: [
-            { text: "I'm with you " },
-            { text: "❤", className: "red-heart-inline" },
-          ],
-          className: "handwritten",
-        },
-        { type: "br" },
-        { type: "text", text: "kamu bisa kok", className: "handwritten" },
-        { type: "text", text: "lewatin Proses", className: "handwritten" },
-        { type: "text", text: "hidup ini dengan", className: "handwritten" },
-        { type: "text", text: "Pelan - Pelan", className: "handwritten" },
-      ],
-    },
-    back: {
-      template: "lined",
-      pageClass: "page-25",
-      lines: [
-        { type: "doodle", name: "purple-hearts-bg-top" },
-        { type: "doodle", name: "purple-cloud", text: "Singkat Saja" },
-        {
-          type: "text",
-          text: "aku ingin bersamamu",
-          spans: [
-            { text: "aku ingin " },
-            { text: "bersamamu", className: "underlined-purple-thick" },
-          ],
-          className: "handwritten",
-        },
-        {
-          type: "text",
-          text: "kapanpun",
-          spans: [{ text: "kapanpun", className: "underlined-purple-thick" }],
-          className: "handwritten indent-2",
-        },
-        { type: "text", text: "dan", className: "handwritten indent-3" },
-        {
-          type: "text",
-          text: "dimanapun",
-          spans: [{ text: "dimanapun", className: "underlined-purple-thick" }],
-          className: "handwritten indent-2",
-        },
-        { type: "br" },
-        {
-          type: "text",
-          text: "@ jika jodoh",
-          spans: [
-            { text: "@ jika jodoh", className: "underlined-purple-thick" },
-          ],
-          className: "handwritten indent-4",
-        },
-        { type: "doodle", name: "purple-hearts-bg-bottom" },
-      ],
-    },
-  },
+
   {
     id: 14,
     front: {
@@ -1062,7 +856,7 @@ export const journalData = [
         { type: "br" },
         {
           type: "text",
-          text: "AKU INGIN Jadi",
+          text: "AKU BISA JADI",
           className: "handwritten uppercase",
         },
         {

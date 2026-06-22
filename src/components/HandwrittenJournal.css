@@ -1,6 +1,6 @@
 :root {
   --paper-bg: #fdfdf7;
-  --line-color: #e2e2e2;
+  --line-color: rgba(0,0,0,0.05); /* more subtle */
   --red-ink: #c0392b;
   --purple-ink: #8e44ad;
   --blue-ink: #2980b9;
@@ -9,6 +9,8 @@
   --pink-ink: #e91e63;
   --green-ink: #27ae60;
   --pencil-ink: #2c3e50;
+  --leather-bg: #1a365d;
+  --leather-text: #c5a059;
   --transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
   --book-width: 380px;
   --book-height: 550px;
@@ -54,6 +56,22 @@
   border-radius: 0 15px 15px 0;
   background: white;
   overflow: hidden;
+}
+
+.journal-front::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 30px; height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.1), transparent);
+  pointer-events: none;
+}
+
+.journal-back::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; width: 30px; height: 100%;
+  background: linear-gradient(to left, rgba(0,0,0,0.1), transparent);
+  pointer-events: none;
 }
 
 .journal-back {
@@ -317,13 +335,13 @@
 
 /* Leather Cover Styles */
 .leather-texture {
-  background-color: #1a365d !important;
+  background-color: var(--leather-bg) !important;
   background-image: url('https://www.transparenttextures.com/patterns/leather.png');
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #c5a059;
+  color: var(--leather-text);
   text-align: center;
   z-index: 1;
 }
